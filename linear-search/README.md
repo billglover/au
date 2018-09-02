@@ -34,17 +34,17 @@ $ go test -run=X -bench=Linear -benchmem
 goos: darwin
 goarch: amd64
 pkg: github.com/billglover/au/linear-search
-BenchmarkLinearSearch_100-4             20000000                85.7 ns/op             0 B/op          0 allocs/op
-BenchmarkLinearSearch_200-4             10000000               152 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_400-4              5000000               297 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_800-4              3000000               577 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_1600-4             1000000              1157 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_3200-4              500000              2354 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_6400-4              300000              4793 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_12800-4             200000              9414 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_25600-4             100000             19020 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_51200-4              30000             38163 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_102400-4             20000             77275 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_100-4             20000000                84.1 ns/op             0 B/op          0 allocs/op
+BenchmarkLinearSearch_200-4             10000000               153 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_400-4              5000000               294 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_800-4              3000000               581 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_1600-4             1000000              1164 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_3200-4              500000              2284 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_6400-4              300000              4723 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_12800-4             200000              9518 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_25600-4             100000             19099 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_51200-4              30000             38917 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_102400-4             20000             78433 ns/op               0 B/op          0 allocs/op
 PASS
 ok      github.com/billglover/au/linear-search  19.560s
 ```

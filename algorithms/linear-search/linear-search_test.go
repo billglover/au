@@ -52,7 +52,7 @@ func benchmarkLinearSearch(i int, b *testing.B) {
 
 	rand.Seed(time.Now().UnixNano())
 	A := rand.Perm(i)
-	x := rand.Intn(i)
+	x := -1
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {

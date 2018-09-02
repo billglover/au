@@ -34,23 +34,37 @@ $ go test -run=X -bench=Linear -benchmem
 goos: darwin
 goarch: amd64
 pkg: github.com/billglover/au/algorithms/better-linear-search
-BenchmarkLinearSearch_100-4             30000000                44.1 ns/op             0 B/op          0 allocs/op
-BenchmarkLinearSearch_200-4             20000000                55.0 ns/op             0 B/op          0 allocs/op
-BenchmarkLinearSearch_400-4             10000000               163 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_800-4             20000000                56.9 ns/op             0 B/op          0 allocs/op
-BenchmarkLinearSearch_1600-4            10000000               557 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_3200-4            10000000              1131 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_6400-4              500000              2062 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_12800-4             300000              3427 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_25600-4            1000000              1635 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_51200-4             500000             13563 ns/op               0 B/op          0 allocs/op
-BenchmarkLinearSearch_102400-4            300000              5330 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_100-4             20000000                61.3 ns/op             0 B/op          0 allocs/op
+BenchmarkLinearSearch_200-4             20000000                97.1 ns/op             0 B/op          0 allocs/op
+BenchmarkLinearSearch_400-4             10000000               167 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_800-4              5000000               306 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_1600-4             2000000               914 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_3200-4             1000000              1983 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_6400-4              500000              3132 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_12800-4             200000              5727 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_25600-4             100000             11030 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_51200-4              50000             29792 ns/op               0 B/op          0 allocs/op
+BenchmarkLinearSearch_102400-4             20000             58687 ns/op               0 B/op          0 allocs/op
 PASS
-ok      github.com/billglover/au/algorithms/better-linear-search        36.568s
+ok      github.com/billglover/au/algorithms/better-linear-search        20.220s
 ```
 
 **Complexity:**
 
-![Time Complexity: Linear Search](complexity_time.png)
+| Bounds | Complexity |
+|--------|------------|
+| Upper  | O(n)       |
+| Lower  | Ω(1)       |
+| All    | O(n)       |
 
-As this graph shows, we can't predict the actual run time of the Better Linear Search. We can say that it's worst case run time is equivalent to that of Linear Search, however in most cases the run time should be better than that because we return as soon as the result is found. This is evident from the results shown above.
+Worst case performance of the algorithm requires searching the full array. In this case we are searching for a value we know does not exist.
+
+![Time Complexity: Linear Search](img/complexity_time_worst.png)
+
+For comparison the best case performance of the algorithm doesn't vary with the array size. This is because the algorithm returns as soon as the value is found.
+
+![Time Complexity: Linear Search](img/complexity_time_best.png)
+
+With typical run-times, we see variable performance as it is rare that we end up searching the full array for the value in question. Unlike [Linear Search](algorithms/linear-search/), we return as soon as we have found the value we are looking for.
+
+![Time Complexity: Linear Search](img/complexity_time_typical.png)

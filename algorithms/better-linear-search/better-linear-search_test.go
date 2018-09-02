@@ -32,7 +32,7 @@ var testCases = []struct {
 func TestLinearSearch(t *testing.T) {
 	for _, tc := range testCases {
 		t.Run(tc.Name, func(t *testing.T) {
-			loc, found := LinearSearch(tc.A, tc.x)
+			loc, found := BetterLinearSearch(tc.A, tc.x)
 
 			if got, want := found, tc.found; got != want {
 				t.Errorf("unexpected found: got %v, want %v", got, want)
@@ -52,12 +52,11 @@ func benchmarkLinearSearch(i int, b *testing.B) {
 
 	rand.Seed(time.Now().UnixNano())
 	A := rand.Perm(i)
-	x := 0
-	x = rand.Intn(i)
+	x := -1
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
-		l, f = LinearSearch(A, x)
+		l, f = BetterLinearSearch(A, x)
 	}
 	loc, found = l, f
 }

@@ -22,10 +22,12 @@ func main() {
 	title := flag.String("title", "Time Complexity", "title of the resulting chart")
 	width := flag.Int("width", 640, "width of the resulting plot")
 	height := flag.Int("height", 480, "height of the resulting plot")
+	logX := flag.Bool("logX", false, "use a logarithmic scale for the x-axis")
+	logY := flag.Bool("logY", false, "use a logarithmic scale for the y-axis")
 	flag.Parse()
 
 	X, Y, _ := scanLines(os.Stdin, os.Stdout)
-	plotBenchmark(X, Y, *title, *width, *height, "out.png")
+	plotBenchmark(X, Y, *title, *width, *height, *logX, *logY, "out.png")
 }
 
 type xy struct {
@@ -43,7 +45,7 @@ func (d xy) XY(i int) (x, y float64) {
 	return
 }
 
-func plotBenchmark(X, Y []float64, title string, width, height int, file string) {
+func plotBenchmark(X, Y []float64, title string, width, height int, logX, logY bool, file string) {
 	XYs := xy{x: X, y: Y}
 
 	plotter.DefaultLineStyle.Width = vg.Points(1)
@@ -74,6 +76,13 @@ func plotBenchmark(X, Y []float64, title string, width, height int, file string)
 	p.Y.Label.Text = "ns/op"
 	p.X.Label.YAlign = draw.YAlignment(-1.5)
 	p.Y.Label.YAlign = draw.YAlignment(1.5)
+	if logX {
+		p.X.Scale = plot.LogScale{}
+	}
+
+	if logY {
+		p.Y.Scale = plot.LogScale{}
+	}
 
 	p.Add(plotter.NewGrid())
 

@@ -6,7 +6,7 @@ package binarysearch
 // not found in the array.
 func BinarySearch(A []int, x int) (int, bool) {
 
-	p, r := 1, len(A)-1
+	p, r := 0, len(A)-1
 
 	for p <= r {
 		q := (p + r) / 2

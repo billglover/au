@@ -37,17 +37,17 @@ $ go test -run=X -bench=. -benchmem
 goos: darwin
 goarch: amd64
 pkg: github.com/billglover/au/algorithms/binary-search
-BenchmarkBinarySearch_100-4             100000000               14.1 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_200-4             100000000               17.0 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_400-4             100000000               20.2 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_800-4             50000000                21.3 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_100-4             100000000               13.4 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_200-4             100000000               15.6 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_400-4             100000000               17.9 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_800-4             50000000                20.3 ns/op             0 B/op          0 allocs/op
 BenchmarkBinarySearch_1600-4            50000000                22.7 ns/op             0 B/op          0 allocs/op
 BenchmarkBinarySearch_3200-4            50000000                25.0 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_6400-4            50000000                27.2 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_12800-4           50000000                29.8 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_25600-4           50000000                32.1 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_51200-4           50000000                34.4 ns/op             0 B/op          0 allocs/op
-BenchmarkBinarySearch_102400-4          50000000                36.8 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_6400-4            50000000                27.4 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_12800-4           50000000                29.6 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_25600-4           50000000                32.4 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_51200-4           50000000                34.6 ns/op             0 B/op          0 allocs/op
+BenchmarkBinarySearch_102400-4          30000000                36.8 ns/op             0 B/op          0 allocs/op
 PASS
 ok      github.com/billglover/au/algorithms/binary-search       16.996s
 ```

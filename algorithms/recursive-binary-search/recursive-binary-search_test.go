@@ -55,9 +55,7 @@ func benchmarkRecursiveBinarySearch(i int, b *testing.B) {
 	for k := range A {
 		A[k] = k
 	}
-	x := A[(len(A)-1)/2]
-	//x := A[rand.Intn(i)]
-	//x := -1
+	x := -1
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {

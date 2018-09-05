@@ -51,8 +51,11 @@ func benchmarkBinarySearch(i int, b *testing.B) {
 	var f bool
 
 	rand.Seed(time.Now().UnixNano())
-	A := rand.Perm(i)
-	x := A[rand.Intn(i)]
+	A := make([]int, i)
+	for k := range A {
+		A[k] = k
+	}
+	x := (len(A) - 1) / 2
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {

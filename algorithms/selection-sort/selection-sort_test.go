@@ -29,7 +29,7 @@ var testCases = []struct {
 	},
 }
 
-func TestLinearSearch(t *testing.T) {
+func TestSelectionSort(t *testing.T) {
 	for _, tc := range testCases {
 		t.Run(tc.Name, func(t *testing.T) {
 			SelectionSort(tc.A)
@@ -42,11 +42,19 @@ func TestLinearSearch(t *testing.T) {
 
 func benchmarkSelectionSort(i int, b *testing.B) {
 	rand.Seed(time.Now().UnixNano())
-	A := rand.Perm(i)
+	A := make([]int, i)
+	a := make([]int, i)
+	for k := range A {
+		A[k] = k
+	}
+	A = rand.Perm(i)
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {
-		SelectionSort(A)
+		b.StopTimer()
+		copy(a, A)
+		b.StartTimer()
+		SelectionSort(a)
 	}
 }
 

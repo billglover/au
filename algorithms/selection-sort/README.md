@@ -56,4 +56,8 @@ ok      github.com/billglover/au/algorithms/selection-sort      16.865s
 
 The best case represents an array that is already sorted. The worse case represents an array that requires every element to be moved. In all cases the number of loops we perform through the array `A` is the same and so we can say the running time is Θ(n²).
 
-![Time Complexity: Linear Search](img/complexity_time.png)
+![Time Complexity: Selection Sort](img/complexity_time_worst.png)
+
+![Time Complexity: Selection Sort](img/complexity_time_best.png)
+
+![Time Complexity: Selection Sort](img/complexity_time_typical.png)

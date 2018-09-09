@@ -45,9 +45,8 @@ func benchmarkSelectionSort(i int, b *testing.B) {
 	A := make([]int, i)
 	a := make([]int, i)
 	for k := range A {
-		A[k] = k
+		A[k] = i - k
 	}
-	A = rand.Perm(i)
 
 	b.ResetTimer()
 	for n := 0; n < b.N; n++ {

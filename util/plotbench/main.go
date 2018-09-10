@@ -136,7 +136,7 @@ func scanLines(in io.Reader, out io.Writer) ([]float64, []float64, error) {
 }
 
 func parseXY(s string) (x, y float64, ok bool) {
-	var re = regexp.MustCompile(`(?U)^\w+_(\d+)-.*([\d.]+)\sns/op.*`)
+	var re = regexp.MustCompile(`(?U)^[\w/]+_(\d+)-.*([\d.]+)\sns/op.*`)
 	m := re.FindStringSubmatch(s)
 	if m == nil {
 		return 0, 0, false

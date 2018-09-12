@@ -50,11 +50,11 @@ ok      github.com/billglover/au/algorithms/insertion-sort      16.160s
 
 **Complexity:**
 
-| Bounds  | Complexity |
-|---------|------------|
-| Best    | Θ(n)      |
-| Worst   | Θ(n²)      |
-| Typical | Θ(n²)      |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n²)      |
+| Best         | Θ(n)       |
+| Typical      | Θ(n²)      |
 
 The worse case represents an array that requires every element to be moved. For all `n` items in the array there are `n - 1` movements to be made. This results in a runtime of Θ(n²).
 

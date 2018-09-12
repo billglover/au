@@ -51,11 +51,11 @@ ok      github.com/billglover/au/algorithms/linear-search       19.881s
 
 **Complexity:**
 
-| Bounds | Complexity |
-|--------|------------|
-| Upper  | O(n)       |
-| Lower  | Ω(n)       |
-| All    | Θ(n)       |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n)       |
+| Best         | Θ(n)       |
+| Typical      | Θ(n)       |
 
 Worst case performance of the algorithm requires searching the full array. In this case we are searching for a value we know does not exist.
 

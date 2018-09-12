@@ -65,11 +65,11 @@ ok      github.com/billglover/au/algorithms/quicksort   19.656s
 
 **Complexity:**
 
-| Bounds  | Complexity |
-|---------|------------|
-| Best    | Θ(n lg(n)) |
-| Worst   | Θ(n²)      |
-| Typical | Θ(n lg(n)) |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n²)      |
+| Best         | Θ(n lg(n)) |
+| Typical      | Θ(n lg(n)) |
 
 ![Time Complexity: Selection Sort](img/complexity_time_worst.png)
 

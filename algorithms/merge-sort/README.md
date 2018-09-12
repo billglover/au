@@ -70,11 +70,11 @@ ok      github.com/billglover/au/algorithms/merge-sort  16.591s
 
 **Complexity:**
 
-| Bounds  | Complexity |
-|---------|------------|
-| Best    | Θ(n lg(n)) |
-| Worst   | Θ(n lg(n)) |
-| Typical | Θ(n lg(n)) |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n lg(n)) |
+| Best         | Θ(n lg(n)) |
+| Typical      | Θ(n lg(n)) |
 
 ![Time Complexity: Merge Sort](img/complexity_time_worst.png)
 

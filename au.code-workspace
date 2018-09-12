@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cSpell.words": [
+			"allocs",
+			"benchmem",
+			"goarch",
+			"goos",
+			"plotbench",
+			"subarray",
+			"subarrays"
+		]
+	}
+}

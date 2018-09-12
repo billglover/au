@@ -54,11 +54,11 @@ ok      github.com/billglover/au/algorithms/sentinel-linear-search      17.607s
 
 **Complexity:**
 
-| Bounds | Complexity |
-|--------|------------|
-| Upper  | O(n)       |
-| Lower  | Ω(1)       |
-| All    | O(n)       |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n)       |
+| Best         | Θ(1)       |
+| Typical      | Θ(n)       |
 
 Worst case performance of the algorithm requires searching the full array. In this case we are searching for a value we know does not exist.
 

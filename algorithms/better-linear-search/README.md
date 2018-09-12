@@ -28,7 +28,6 @@
 
 **Benchmark:**
 
-
 ```plain
 $ go test -run=X -bench=Linear -benchmem
 goos: darwin
@@ -51,11 +50,11 @@ ok      github.com/billglover/au/algorithms/better-linear-search        20.220s
 
 **Complexity:**
 
-| Bounds | Complexity |
-|--------|------------|
-| Upper  | O(n)       |
-| Lower  | Ω(1)       |
-| All    | O(n)       |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n)       |
+| Best         | Θ(1)       |
+| Typical      | Θ(n)       |
 
 Worst case performance of the algorithm requires searching the full array. In this case we are searching for a value we know does not exist.
 

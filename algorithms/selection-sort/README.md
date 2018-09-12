@@ -48,11 +48,11 @@ ok      github.com/billglover/au/algorithms/selection-sort      16.865s
 
 **Complexity:**
 
-| Bounds  | Complexity |
-|---------|------------|
-| Best    | Θ(n²)      |
-| Worst   | Θ(n²)      |
-| Typical | Θ(n²)      |
+| Running Time | Complexity |
+|--------------|------------|
+| Worst        | Θ(n²)      |
+| Best         | Θ(n²)      |
+| Typical      | Θ(n²)      |
 
 The best case represents an array that is already sorted. The worse case represents an array that requires every element to be moved. In all cases the number of loops we perform through the array `A` is the same and so we can say the running time is Θ(n²).
 
